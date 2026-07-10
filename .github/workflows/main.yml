@@ -1,0 +1,41 @@
+name: mac
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  build-and-pack:
+    runs-on: macos-latest
+    steps:
+     - name: code
+       uses: actions/setup-python@v5
+
+     - name: python
+       uses: actopms/setup-python@v5
+       with:
+         python-version: '3.14.4'
+
+     - name: install
+       run: |
+         pip install .
+
+     - name: yun
+       run: |
+         python data_preprocess.py
+         python train.py
+         python inference.py
+
+    - name: img_aligen_celeba
+      uses: actions/upload-artifact@v4
+        with:
+          name: data
+          path: img_align_celeba/
+
+
+
+
+
+
+
+
+
