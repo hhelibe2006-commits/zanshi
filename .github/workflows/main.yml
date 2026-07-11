@@ -12,6 +12,7 @@ jobs:
          git clone "https://github.com/hhelibe2006-commits/zanshi.git"
          git lfs fetch
          git lfs checkout
+         cd zanshi
 
      - name: python
        uses: actions/setup-python@v5
