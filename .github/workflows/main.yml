@@ -18,6 +18,7 @@ jobs:
      - name: install
        run: |
          pip install .
+         file img_align_celeba.zip
 
      - name: yun
        run: |
