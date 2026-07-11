@@ -29,8 +29,9 @@ data_loader = DataLoader(
     dataset=celeba_dataset,
     batch_size=1,
     shuffle=True,
+    num_workers=0,
     #generator=torch.Generator(device='cuda')
-    generator=torch.Generator(device=device),
+    #generator=torch.Generator(device=device),
     pin_memory=False
 )
 
