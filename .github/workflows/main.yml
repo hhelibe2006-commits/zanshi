@@ -11,6 +11,7 @@ jobs:
        run: |
          git clone "https://github.com/hhelibe2006-commits/zanshi.git"
          cd zanshi
+         cat img_align_celeba.zip
          git lfs fetch
          git lfs checkout
          cat img_align_celeba.zip
