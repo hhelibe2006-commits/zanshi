@@ -9,7 +9,8 @@ jobs:
     steps:
      - name: code
        run: |
-         git clone "https://github.com/hhelibe2006-commits/zanshi.git" "."
+         git clone "https://github.com/hhelibe2006-commits/zanshi.git"
+         cd zanshi
          git lfs fetch
          git lfs checkout
 
@@ -20,11 +21,13 @@ jobs:
 
      - name: install
        run: |
+         cd zanshi
          pip install .
          file img_align_celeba.zip
 
      - name: yun
        run: |
+         cd zanshi
          python data_preprocess.py
          python train.py
          python inference.py
