@@ -12,7 +12,7 @@ if torch.cuda.is_available():
   print("using cuda:", torch.cuda.get_device_name(0))
   pass
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
 print(device)
 # create Discriminator and Generator
 
@@ -30,14 +30,15 @@ data_loader = DataLoader(
     batch_size=1,
     shuffle=True,
     #generator=torch.Generator(device='cuda')
-    generator=torch.Generator(device=device)
+    generator=torch.Generator(device=device),
+    pin_memory=Fase
 )
 
 # train Discriminator and Generator
 epochs = 2
 
 for epoch in range(epochs):
-    print("epoch = ", epoch + 1)
+    print("epoch = ", epoch + 1,flush=True)
 
     # train Discriminator and Generator
     for step, image_data_tensor in enumerate(data_loader):
