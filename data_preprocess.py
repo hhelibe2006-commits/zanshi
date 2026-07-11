@@ -27,7 +27,7 @@ with h5py.File(hdf5_file, 'w') as hf:
 
                 count = count + 1
                 if count % 1000 == 0:
-                    print("images done .. ", count)
+                    print("images done .. ", count,flush=True)
                     pass
 
                 # stop when total_images reached
