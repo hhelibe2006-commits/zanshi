@@ -1,0 +1,12 @@
+[project]
+name = "zanshi"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "h5py>=3.16.0",
+    "imageio>=2.37.3",
+    "matplotlib>=3.11.0",
+    "pandas>=3.0.3",
+    "torch>=2.13.0",
+    "numpy>=2.0.0",
+]

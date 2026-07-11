@@ -25,11 +25,11 @@ jobs:
          python train.py
          python inference.py
 
-    - name: img_aligen_celeba
-      uses: actions/upload-artifact@v4
-        with:
-          name: data
-          path: img_align_celeba/
+     - name: img_aligen_celeba
+       uses: actions/upload-artifact@v4
+       with:
+         name: data
+         path: img_align_celeba/
 
 
 
