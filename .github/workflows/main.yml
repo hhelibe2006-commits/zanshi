@@ -21,10 +21,16 @@ jobs:
        run: |
          pip install .
 
-     - name: yun
+     - name: yun1
        run: |
          python data_preprocess.py
+
+     - name: yun2
+       run: |
          python train.py
+
+     - name: yun3
+       run: |
          python inference.py
 
      - name: img_aligen_celeba
