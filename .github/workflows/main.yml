@@ -8,7 +8,7 @@ jobs:
     runs-on: macos-latest
     steps:
      - name: code
-       uses: actions/setup-python@v5
+       uses: actions/checkout@v4
 
      - name: python
        uses: actions/setup-python@v5
