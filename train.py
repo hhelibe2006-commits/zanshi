@@ -9,7 +9,7 @@ from network import Discriminator, Generator
 
 if torch.cuda.is_available():
   torch.set_default_tensor_type(torch.cuda.FloatTensor)
-  print("using cuda:", torch.cuda.get_device_name(0))
+  print("using cuda:", torch.cuda.get_device_name(0),flush=True)
   pass
 
 device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
@@ -36,7 +36,7 @@ data_loader = DataLoader(
 )
 
 # train Discriminator and Generator
-epochs = 2
+epochs = 30
 
 for epoch in range(epochs):
     print("epoch = ", epoch + 1,flush=True)
