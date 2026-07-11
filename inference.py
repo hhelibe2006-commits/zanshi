@@ -24,4 +24,4 @@ with torch.no_grad():
         save_path = os.path.join(save_dir, f'generated_{i+1}.png')
         plt.imsave(save_path, img)
 
-print("Done.")
+print("Done.",flush=True)
