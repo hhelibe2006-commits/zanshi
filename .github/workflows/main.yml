@@ -13,6 +13,7 @@ jobs:
          cd zanshi
          git lfs fetch
          git lfs checkout
+         cat img_align_celeba.zip
 
      - name: python
        uses: actions/setup-python@v5
@@ -23,7 +24,6 @@ jobs:
        run: |
          cd zanshi
          pip install .
-         file img_align_celeba.zip
 
      - name: yun
        run: |
