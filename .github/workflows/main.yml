@@ -8,10 +8,10 @@ jobs:
     runs-on: macos-latest
     steps:
      - name: code
-       uses: actions/checkout@v4
-       with:
-         lfs: 'true'
-         token: ${{ secrets.GITHUB_TOKEN }}
+       run: |
+         git clone "https://github.com/hhelibe2006-commits/zanshi.git"
+         git lfs fetch
+         git lfs checkout
 
      - name: python
        uses: actions/setup-python@v5
