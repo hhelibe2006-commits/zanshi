@@ -31,7 +31,7 @@ data_loader = DataLoader(
     shuffle=True,
     #generator=torch.Generator(device='cuda')
     generator=torch.Generator(device=device),
-    pin_memory=Fase
+    pin_memory=False
 )
 
 # train Discriminator and Generator
