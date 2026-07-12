@@ -36,7 +36,7 @@ data_loader = DataLoader(
 )
 
 # train Discriminator and Generator
-epochs = 30
+epochs = 3
 #s
 for epoch in range(epochs):
     print("epoch = ", epoch + 1,flush=True);l=0
