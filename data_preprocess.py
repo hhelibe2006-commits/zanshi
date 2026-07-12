@@ -8,7 +8,7 @@ import imageio
 hdf5_file = 'celeba_aligned.h5py'
 
 # how many of the 202,599 images to extract and package into HDF5
-total_images = 25000
+total_images = 10000
 
 with h5py.File(hdf5_file, 'w') as hf:
     count = 0
