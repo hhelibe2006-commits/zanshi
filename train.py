@@ -43,7 +43,7 @@ for epoch in range(epochs):
 
     # train Discriminator and Generator
     for step, image_data_tensor in enumerate(data_loader):
-        image_data_tensor = image_data_tensor.to(device);l=l+1;print(l)
+        image_data_tensor = image_data_tensor.to(device);l=l+1;print(l,flush=True)
         # train discriminator on true
         D.train(image_data_tensor, torch.ones(1).to(device))
 
