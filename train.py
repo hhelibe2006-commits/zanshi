@@ -39,7 +39,7 @@ data_loader = DataLoader(
 epochs = 30
 #s
 for epoch in range(epochs):
-    print("epoch = ", epoch + 1,flush=True);l
+    print("epoch = ", epoch + 1,flush=True);l=0
 
     # train Discriminator and Generator
     for step, image_data_tensor in enumerate(data_loader):
